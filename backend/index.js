@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = 3001;
-const SECRET_KEY = "61d70263f8d32a5fccfce3ba8ab1f2907c235186b870f8047505d844a3f41de7dfb7dcc2a772fb6d978ddb593caaeadc91882184e521fce0dc9d7a669daa79f6";
+const SECRET_KEY = process.env.JWT_SECRET;
 
 app.use(cors());
 app.use(bodyParser.json());
